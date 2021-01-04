@@ -4,7 +4,7 @@
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-add_compile_options(-g -O3 -Wall -Werror)
+add_compile_options(-g -O3 -Wall -Werror -muintr)
 
 # Apple's C standard library already contains the math functions
 if(APPLE)
@@ -43,6 +43,7 @@ add_subdirectory(shm-sync)
 
 if (NOT APPLE)
 	add_subdirectory(eventfd)
+	add_subdirectory(uintrfd)
 endif()
 
 if (ZMQ_FOUND)
