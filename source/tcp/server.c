@@ -190,7 +190,7 @@ void communicate(int descriptor, struct Arguments *args, int busy_waiting) {
 
 		// Read from client
 		if (receive(descriptor, buffer, args->size, busy_waiting) == -1) {
-			throw("Error receving from server");
+			throw("Error receiving from server");
 		}
 
 		benchmark(&bench);

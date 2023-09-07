@@ -71,7 +71,7 @@ void server_communicate(int descriptor, struct Arguments* args) {
 }
 
 void communicate(int descriptor, struct Arguments* args) {
-	// File descriptors can only be shared bewteen related processes,
+	// File descriptors can only be shared between related processes,
 	// therefore we will need to fork this process
 	pid_t pid;
 

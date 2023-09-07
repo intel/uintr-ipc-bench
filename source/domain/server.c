@@ -54,7 +54,7 @@ void setup_socket(int socket_descriptor) {
 	// 1. sun_family: The family of the socket. Should be AF_UNIX
 	//                for UNIX-domain sockets (AF_LOCAL is the same,
 	//                but AF_UNIX is POSIX).
-	// 2. sun_path: Noting that a UNIX-domain socket ist just a
+	// 2. sun_path: Noting that a UNIX-domain socket is just a
 	//              file in the file-system, it also has a path.
 	//              This may be any path the program has permission
 	//              to create, read and write files in. The maximum
@@ -157,7 +157,7 @@ int main(int argc, char* argv[]) {
 	// File descriptor for the server socket
 	int socket_descriptor;
 	// File descriptor for the socket over which
-	// the communciation will happen with the client
+	// the communication will happen with the client
 	int connection;
 
 	// Flag to determine if we want busy-waiting

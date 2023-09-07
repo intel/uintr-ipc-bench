@@ -148,7 +148,7 @@ Note that because we will only override `read`/`write` or `recv`/`send` (only
 one of these two pairs), the other will remain for exclusive communication over
 the domain socket.
 
-One idea would actually be to allocate two shared memory segements, one for each
+One idea would actually be to allocate two shared memory segments, one for each
 channel. Then we could set the file permissions on server/client side such that
 each side could only read or write to the buffers it is allowed to.
 
