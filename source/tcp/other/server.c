@@ -27,7 +27,7 @@ void *get_in_addr(struct sockaddr *sa) {
 	if (sa->sa_family == AF_INET) {
 		// Cast the raw address protocol part in sockaddr
 		// to the more accessible sockaddr_in structure
-		// so we can aaccess the s_addr field
+		// so we can access the s_addr field
 		struct sockaddr_in *in = (struct sockaddr_in *)sa;
 		return &(in->sin_addr);
 	} else {
@@ -133,7 +133,7 @@ int main(int argc, const char *argv[]) {
 		exit(1);
 	}
 
-	printf("Server: Wainting for connections ...");
+	printf("Server: Waiting for connections ...");
 
 	while (true) {
 		sin_size = sizeof their_addr;
@@ -152,7 +152,7 @@ int main(int argc, const char *argv[]) {
 							get_in_addr((struct sockaddr *)&their_addr),
 							ip,
 							sizeof ip);
-		printf("Server: Conneted to: %s\n", ip);
+		printf("Server: Connected to: %s\n", ip);
 
 		// Fork the process at this point
 		if (fork() == 0) {

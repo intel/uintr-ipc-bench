@@ -39,7 +39,7 @@ int semaphore_operation(int semaphore_id, int action) {
 	// Modify the value somehow
 	operations[0].sem_op = action;
 	// When the process exits, have the OS undo
-	// the value change of the semphore
+	// the value change of the semaphore
 	// Can also set IPC_NOWAIT, so that the semaphore
 	// will never block, but fail the wait operation
 	// when the semaphore value is 0

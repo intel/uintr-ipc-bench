@@ -78,7 +78,7 @@ int main(int argc, char* argv[]) {
 				 Without MAP_SHARED, writes may be buffered by the OS.
 			 * MAP_FILE: the default (zero) flag.
 		5: The file descriptor to the opened file.
-		6: The offset from the beginnning in the file, starting from which to map.
+		6: The offset from the beginning in the file, starting from which to map.
 	*/
 	// clang-format off
   file_memory = mmap(
@@ -118,7 +118,7 @@ int main(int argc, char* argv[]) {
 	communicate(file_memory, &args);
 
 	// Unmap the file from the process memory
-	// Actually unncessary because the OS will do
+	// Actually unnecessary because the OS will do
 	// this automatically when the process terminates
 	if (munmap(file_memory, args.size) < 0) {
 		throw("Error unmapping file!");
